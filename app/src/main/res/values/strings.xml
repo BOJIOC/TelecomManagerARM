@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">TelecomManager</string>
+    <string name="fault_report_activity_label">Fault Report</string>
+    <string name="register_element_activity_label">Register Element</string>
+
+    <string-array name="type_items">
+        <item>Выберите тип устройства</item>
+        <item>Маршрутизатор</item>
+        <item>Коммутатор</item>
+        <item>Сервер</item>
+        <item>Клиентское устройство</item>
+        <item>Шлюз</item>
+        <item>Система хранения данных</item>
+    </string-array>
+
+
+    <!-- Массив для статуса элемента -->
+    <string-array name="status_items">
+        <item>Выберите статус</item>
+        <item>Активен</item>
+        <item>Неактивен</item>
+        <item>В процессе настройки</item>
+        <item>Отключен</item>
+    </string-array>
+
+
+</resources>
