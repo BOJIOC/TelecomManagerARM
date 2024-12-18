@@ -33,7 +33,7 @@ public class NetworkSpeedMeasurementActivity extends AppCompatActivity {
         btnMeasureSpeed.setOnClickListener(v -> {
             tvErrorMessage.setVisibility(TextView.GONE);
             tvDownloadSpeed.setText("Проверка скорости...");
-            progressBar.setVisibility(ProgressBar.VISIBLE);r
+            progressBar.setVisibility(ProgressBar.VISIBLE);
 
             new Thread(() -> {
                 String speedResult = measureDownloadSpeed();
