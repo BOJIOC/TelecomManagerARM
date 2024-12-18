@@ -11,6 +11,8 @@ import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
+import com.example.telecommanager.Activities.MainActivity;
+
 public class MainActivityTest {
 
     @Before

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".Activities.MainActivity">
 
     <!-- Заголовок страницы -->
     <TextView
@@ -32,7 +32,7 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/rounded_button"
         android:backgroundTint="#21455F"
-        android:text="Регистрация элемента"
+        android:text="Регистрация сетевого элемента"
         android:textColor="#FDFDFD"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"

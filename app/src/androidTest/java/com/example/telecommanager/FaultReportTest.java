@@ -8,6 +8,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import androidx.test.core.app.ApplicationProvider;
 
+import com.example.telecommanager.Databases.DatabaseHelper;
+import com.example.telecommanager.Databases.FaultReport;
+
 public class FaultReportTest {
 
     private DatabaseHelper databaseHelper;

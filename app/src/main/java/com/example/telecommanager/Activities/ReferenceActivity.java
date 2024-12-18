@@ -1,9 +1,11 @@
-package com.example.telecommanager;
+package com.example.telecommanager.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.telecommanager.R;
 
 public class ReferenceActivity extends AppCompatActivity {
 
@@ -14,14 +16,12 @@ public class ReferenceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reference);
 
-        // Инициализация кнопок
         btnToolsForMounting = findViewById(R.id.btnToolsForMounting);
         btnMountingWorks = findViewById(R.id.btnMountingWorks);
         btnLinesOfCommunication = findViewById(R.id.btnLinesOfCommunication);
         btnNetworkProtocols = findViewById(R.id.btnNetworkProtocols);
-        btnBackToMainMenu = findViewById(R.id.btnBackToMainMenu); // Кнопка для возврата
+        btnBackToMainMenu = findViewById(R.id.btnBackToMainMenu);
 
-        // Обработчики нажатий на кнопки
         btnToolsForMounting.setOnClickListener(v -> {
             Intent intent = new Intent(ReferenceActivity.this, ToolsListActivity.class);
             startActivity(intent);
@@ -37,17 +37,15 @@ public class ReferenceActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // Обработчики для новых кнопок
         btnNetworkProtocols.setOnClickListener(v -> {
             Intent intent = new Intent(ReferenceActivity.this, ProtocolsListActivity.class);
             startActivity(intent);
         });
 
-        // Обработчик для кнопки возврата в главное меню
         btnBackToMainMenu.setOnClickListener(v -> {
-            Intent intent = new Intent(ReferenceActivity.this, MainActivity.class); // Переход к главному меню
+            Intent intent = new Intent(ReferenceActivity.this, MainActivity.class);
             startActivity(intent);
-            finish();  // Закрываем текущую активность
+            finish();
         });
     }
 }

@@ -1,11 +1,11 @@
-package com.example.telecommanager;
+package com.example.telecommanager.Activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import com.example.telecommanager.R;
 
 public class ProtocolDetailActivity extends AppCompatActivity {
 
@@ -18,19 +18,15 @@ public class ProtocolDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_protocol_detail);
 
-        // Инициализация элементов интерфейса
         protocolNameTextView = findViewById(R.id.protocolNameTextView);
         protocolDescriptionTextView = findViewById(R.id.protocolDescriptionTextView);
         protocolImageView = findViewById(R.id.protocolImageView);
         btnBackToMenu = findViewById(R.id.btnBackToMenu);
 
-        // Получаем данные из Intent
         String protocolCategory = getIntent().getStringExtra("PROTOCOL_CATEGORY");
 
-        // Устанавливаем название категории
         protocolNameTextView.setText(protocolCategory);
 
-        // Настроим описание и изображение протокола в зависимости от переданных данных
         switch (protocolCategory) {
             case "Протоколы маршрутизации":
                 protocolDescriptionTextView.setText("Протоколы маршрутизации играют ключевую роль в сетях, обеспечивая эффективный обмен маршрутной информацией между устройствами. Эти протоколы необходимы для правильного выбора наилучшего пути для передачи данных, что критично для стабильно работающих и масштабируемых сетей.\n\n"
@@ -44,7 +40,7 @@ public class ProtocolDetailActivity extends AppCompatActivity {
                         + "NARP (Reverse ARP) — протокол, используемый для получения IP-адреса устройства, если известен его MAC-адрес.\n\n"
                         + "NHRP (Next Hop Resolution Protocol) — протокол для разрешения адреса следующего маршрута в сети, что помогает улучшить эффективность маршрутизации.\n\n"
                         + "TRIP (Transparent Interconnection of Packets) — протокол, используемый для оптимизации маршрутизации в виртуальных частных сетях (VPN).");
-                protocolImageView.setImageResource(R.drawable.routing_icon); // Заменить на свой файл
+                protocolImageView.setImageResource(R.drawable.routing_icon);
                 break;
 
             case "Протоколы телефонии":
@@ -58,7 +54,7 @@ public class ProtocolDetailActivity extends AppCompatActivity {
                         + "Jingle — протокол, используемый в мессенджерах и системах связи для передачи аудио- и видеозвонков. Jingle был разработан на базе XMPP и применяется в таких приложениях, как Google Talk.\n\n"
                         + "Megaco/H.248 — протокол для управления шлюзами в телефонии. Megaco используется для взаимодействия между сетями и системами телефонии.\n\n"
                         + "H.323 — стандарт для передачи голосовых и видеозвонков через IP-сети. H.323 поддерживает интеграцию голосовой и видеосвязи с другими коммуникационными протоколами.");
-                protocolImageView.setImageResource(R.drawable.telephony_icon); // Заменить на свой файл
+                protocolImageView.setImageResource(R.drawable.telephony_icon);
                 break;
 
             case "Протоколы видеонаблюдения":
@@ -71,7 +67,7 @@ public class ProtocolDetailActivity extends AppCompatActivity {
                         + "SMTP — протокол для отправки электронных писем. В видеонаблюдении используется для отправки уведомлений о событиях (например, детектирование движения) на электронную почту.\n\n"
                         + "RTP и RTSP — протоколы, используемые для передачи аудио и видео в реальном времени. RTP часто используется вместе с RTSP для обеспечения потоковой передачи медиа в системах видеонаблюдения.\n\n"
                         + "NTP — протокол для синхронизации времени. Важно для видеонаблюдения, чтобы все камеры имели одинаковое время для точного хронологического отображения событий.");
-                protocolImageView.setImageResource(R.drawable.surveillance_icon); // Заменить на свой файл
+                protocolImageView.setImageResource(R.drawable.surveillance_icon);
                 break;
 
             default:
@@ -80,13 +76,6 @@ public class ProtocolDetailActivity extends AppCompatActivity {
                 break;
         }
 
-        // Обработчик для кнопки "Вернуться в меню"
         btnBackToMenu.setOnClickListener(v -> finish());
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        finish();
     }
 }

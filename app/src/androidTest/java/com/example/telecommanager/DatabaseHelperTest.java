@@ -7,6 +7,8 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import com.example.telecommanager.Databases.DatabaseHelper;
+
 public class DatabaseHelperTest {
 
     private DatabaseHelper databaseHelper;

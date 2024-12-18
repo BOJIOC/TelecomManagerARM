@@ -1,10 +1,12 @@
-package com.example.telecommanager;
+package com.example.telecommanager.Activities;
 
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.telecommanager.R;
 
 public class MountingWorkDetailActivity extends AppCompatActivity {
 
@@ -17,19 +19,15 @@ public class MountingWorkDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mounting_work_detail);
 
-        // Инициализация UI элементов
         workTitleTextView = findViewById(R.id.workTitleTextView);
         workDescriptionTextView = findViewById(R.id.workDescriptionTextView);
         workImageView = findViewById(R.id.workImageView);
         btnBackToWorkList = findViewById(R.id.btnBackToWorkList);
 
-        // Получаем данные, переданные через Intent
         String workType = getIntent().getStringExtra("WORK_TYPE");
 
-        // Устанавливаем данные в UI
         workTitleTextView.setText(workType);
 
-        // Настроим описание и изображение работы в зависимости от типа
         switch (workType) {
             case "Проволочный лоток":
                 workDescriptionTextView.setText("Проволочный лоток представляет собой канал, выполненный из металлической проволоки, предназначенный для прокладки кабелей. Этот тип лотка часто используется в офисных и производственных помещениях, так как он легкий и удобный в монтаже. Он идеально подходит для установки в местах, где требуется хорошая вентиляция и охлаждение кабелей, что предотвращает перегрев. Проволочные лотки идеально подходят для использования в системах связи и электроснабжения.");
@@ -49,7 +47,6 @@ public class MountingWorkDetailActivity extends AppCompatActivity {
                 break;
         }
 
-        // Обработчик кнопки возврата
         btnBackToWorkList.setOnClickListener(v -> finish());
     }
 }

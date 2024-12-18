@@ -1,11 +1,11 @@
-package com.example.telecommanager;
+package com.example.telecommanager.Activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import com.example.telecommanager.R;
 
 public class ToolDetailActivity extends AppCompatActivity {
 
@@ -18,19 +18,15 @@ public class ToolDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tool_detail);
 
-        // Инициализация элементов интерфейса
         toolNameTextView = findViewById(R.id.toolNameTextView);
         toolDescriptionTextView = findViewById(R.id.toolDescriptionTextView);
         toolImageView = findViewById(R.id.toolImageView);
         btnBackToMenu = findViewById(R.id.btnBackToMenu);
 
-        // Получаем данные из Intent
         String toolName = getIntent().getStringExtra("TOOL_NAME");
 
-        // Устанавливаем название инструмента
         toolNameTextView.setText(toolName);
 
-        // Настроим описание и изображение инструмента в зависимости от переданных данных
         switch (toolName) {
             case "Кримпер":
                 toolDescriptionTextView.setText("Кримпер — это инструмент, предназначенный для обжима разъемов, клеммников или обжимных гильз на проводах. Он используется для создания надежного электрического соединения между проводом и разъемом. Как работает кримпер:\n\n" +
@@ -99,9 +95,7 @@ public class ToolDetailActivity extends AppCompatActivity {
                 break;
         }
 
-        // Обработчик для кнопки "Вернуться в меню"
         btnBackToMenu.setOnClickListener(v -> {
-            // Завершаем текущую активность и возвращаемся на предыдущий экран
             finish();
         });
     }
@@ -109,7 +103,6 @@ public class ToolDetailActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        // Завершаем текущую активность, чтобы вернуться в список инструментов
         finish();
     }
 }

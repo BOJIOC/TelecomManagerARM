@@ -1,7 +1,7 @@
-package com.example.telecommanager;
+package com.example.telecommanager.Databases;
 
 public class FaultReport {
-    private int id; // Добавлено
+    private int id;
     private String description;
     private String status;
     private long timestamp;
@@ -12,7 +12,6 @@ public class FaultReport {
         this.timestamp = timestamp;
     }
 
-    // Новый конструктор для загрузки данных из базы
     public FaultReport(int id, String description, String status, long timestamp) {
         this.id = id;
         this.description = description;
@@ -20,7 +19,6 @@ public class FaultReport {
         this.timestamp = timestamp;
     }
 
-    // Геттеры и сеттеры для id
     public int getId() {
         return id;
     }
@@ -37,15 +35,12 @@ public class FaultReport {
         this.description = description;
     }
 
-    // Метод для получения даты в строковом формате
     public String getDate() {
-        // Преобразуем timestamp в строку (например, в формате "dd/MM/yyyy")
         java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         java.util.Date date = new java.util.Date(this.timestamp);
         return sdf.format(date);
     }
 
-    // Метод для получения timestamp
     public long getTimestamp() {
         return timestamp;
     }

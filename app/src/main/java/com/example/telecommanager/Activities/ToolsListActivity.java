@@ -1,9 +1,11 @@
-package com.example.telecommanager;
+package com.example.telecommanager.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.telecommanager.R;
 
 public class ToolsListActivity extends AppCompatActivity {
 
@@ -15,7 +17,6 @@ public class ToolsListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tools_list);
 
-        // Инициализация кнопок
         btnCrimper = findViewById(R.id.btnCrimper);
         btnStripper = findViewById(R.id.btnStripper);
         btnScrewdrivers = findViewById(R.id.btnScrewdrivers);
@@ -26,7 +27,6 @@ public class ToolsListActivity extends AppCompatActivity {
         btnBackToSections = findViewById(R.id.btnBackToSections);
         btnBackToMainMenu = findViewById(R.id.btnBackToMainMenu);
 
-        // Обработчики для кнопок инструментов
         btnCrimper.setOnClickListener(v -> openToolDetailActivity("Кримпер"));
         btnStripper.setOnClickListener(v -> openToolDetailActivity("Стриппер"));
         btnScrewdrivers.setOnClickListener(v -> openToolDetailActivity("Отвертки"));
@@ -35,14 +35,12 @@ public class ToolsListActivity extends AppCompatActivity {
         btnCableTester.setOnClickListener(v -> openToolDetailActivity("Кабельный тестер"));
         btnHammerDrill.setOnClickListener(v -> openToolDetailActivity("Перфоратор"));
 
-        // Обработчик для кнопки "Вернуться к выбору раздела"
         btnBackToSections.setOnClickListener(v -> {
             Intent intent = new Intent(ToolsListActivity.this, ReferenceActivity.class);
             startActivity(intent);
             finish();
         });
 
-        // Обработчик для кнопки "Вернуться в главное меню"
         btnBackToMainMenu.setOnClickListener(v -> {
             Intent intent = new Intent(ToolsListActivity.this, MainActivity.class);
             startActivity(intent);
@@ -50,10 +48,9 @@ public class ToolsListActivity extends AppCompatActivity {
         });
     }
 
-    // Метод для открытия активности с деталями инструмента
     private void openToolDetailActivity(String toolName) {
         Intent intent = new Intent(ToolsListActivity.this, ToolDetailActivity.class);
-        intent.putExtra("TOOL_NAME", toolName); // Передаем название инструмента в другую активность
+        intent.putExtra("TOOL_NAME", toolName);
         startActivity(intent);
     }
 }

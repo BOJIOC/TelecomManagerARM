@@ -1,12 +1,15 @@
-package com.example.telecommanager;
+package com.example.telecommanager.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.recyclerview.widget.RecyclerView;
+import com.example.telecommanager.Databases.DatabaseHelper;
+import com.example.telecommanager.Databases.FaultReport;
+import com.example.telecommanager.R;
+import com.example.telecommanager.UpdateStatisticsListener;
 
 import java.util.List;
 
@@ -32,24 +35,18 @@ public class FaultReportAdapter extends RecyclerView.Adapter<FaultReportAdapter.
     public void onBindViewHolder(FaultReportViewHolder holder, int position) {
         FaultReport faultReport = faultReports.get(position);
 
-        // Установка данных в элемент списка
         holder.descriptionTextView.setText(faultReport.getDescription());
         holder.statusTextView.setText(faultReport.getStatus());
 
-        // Обработчик кнопки "Удалить"
         holder.deleteButton.setOnClickListener(v -> {
-            // Удаляем отчет о сбое из базы данных
             databaseHelper.deleteFaultReport(faultReport.getId());
 
-            // Удаляем отчет из списка
             faultReports.remove(position);
             notifyItemRemoved(position);
 
-            // Обновляем статистику с учетом изменений
             int updatedFaultReportsCount = faultReports.size();
-            int updatedNetworkElementsCount = databaseHelper.getAllNetworkElements().size(); // Пересчитываем элементы
+            int updatedNetworkElementsCount = databaseHelper.getAllNetworkElements().size();
 
-            // Уведомляем слушателя о новом состоянии статистики
             statisticsListener.onStatisticsUpdated(updatedFaultReportsCount, updatedNetworkElementsCount);
         });
     }

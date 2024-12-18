@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/rounded_edittext"
-    tools:context=".RegisterElementActivity">
+    tools:context=".Activities.RegisterElementActivity">
 
     <TextView
         android:id="@+id/titleTextView"

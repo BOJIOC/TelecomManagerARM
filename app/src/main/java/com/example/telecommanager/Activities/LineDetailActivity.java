@@ -1,4 +1,4 @@
-package com.example.telecommanager;
+package com.example.telecommanager.Activities;
 
 import android.os.Bundle;
 import android.view.View;
@@ -7,30 +7,26 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.telecommanager.R;
+
 public class LineDetailActivity extends AppCompatActivity {
 
     private TextView lineTitleTextView, lineDescriptionTextView;
     private ImageView lineImageView;
-    private Button btnBackToSections;  // Объявляем кнопку
+    private Button btnBackToSections;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_line_detail);
 
-        // Инициализация UI элементов
         lineTitleTextView = findViewById(R.id.lineTitleTextView);
         lineDescriptionTextView = findViewById(R.id.lineDescriptionTextView);
         lineImageView = findViewById(R.id.lineImageView);
-        btnBackToSections = findViewById(R.id.btnBackToSections); // Инициализация кнопки
-
-        // Получаем данные, переданные через Intent
+        btnBackToSections = findViewById(R.id.btnBackToSections);
         String lineType = getIntent().getStringExtra("LINE_TYPE");
-
-        // Устанавливаем данные в UI
         lineTitleTextView.setText(lineType);
 
-        // Настроим описание и изображение линии связи в зависимости от типа
         switch (lineType) {
             case "Медная линия":
                 lineDescriptionTextView.setText("Медные линии связи используются для передачи электрических сигналов.\n\n" +
@@ -72,12 +68,11 @@ public class LineDetailActivity extends AppCompatActivity {
                 break;
         }
 
-        // Устанавливаем обработчик для кнопки "Вернуться к линиям связи"
         btnBackToSections.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Завершаем текущую активность и возвращаемся на предыдущий экран
-                finish();  // Завершение активности и возврат на предыдущий экран
+
+                finish();
             }
         });
     }

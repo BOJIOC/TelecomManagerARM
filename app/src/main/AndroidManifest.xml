@@ -18,7 +18,7 @@
 
     <!-- Main Activity -->
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
@@ -29,36 +29,36 @@
 
         <!-- Fault Report Activity -->
         <activity
-            android:name=".FaultReportActivity"
+            android:name=".Activities.FaultReportActivity"
             android:label="@string/fault_report_activity_label" />
 
         <!-- RegisterElementActivity -->
         <activity
-            android:name=".RegisterElementActivity"
+            android:name=".Activities.RegisterElementActivity"
             android:label="@string/register_element_activity_label" />
 
-        <activity android:name=".StatisticsActivity"></activity>
+        <activity android:name=".Activities.StatisticsActivity"></activity>
 
-        <activity android:name=".NetworkSpeedMeasurementActivity"></activity>
+        <activity android:name=".Activities.NetworkSpeedMeasurementActivity"></activity>
 
 
-        <activity android:name=".ReferenceActivity" />
+        <activity android:name=".Activities.ReferenceActivity" />
 
-        <activity android:name=".ToolsListActivity" />
+        <activity android:name=".Activities.ToolsListActivity" />
 
-        <activity android:name=".ToolDetailActivity" />
+        <activity android:name=".Activities.ToolDetailActivity" />
 
-        <activity android:name=".MountingWorksListActivity"/>
+        <activity android:name=".Activities.MountingWorksListActivity"/>
 
-        <activity android:name=".MountingWorkDetailActivity"/>
+        <activity android:name=".Activities.MountingWorkDetailActivity"/>
 
-        <activity android:name=".LineDetailActivity"/>
+        <activity android:name=".Activities.LineDetailActivity"/>
 
-        <activity android:name=".LinesOfCommunicationListActivity"/>
+        <activity android:name=".Activities.LinesOfCommunicationListActivity"/>
 
-        <activity android:name=".ProtocolsListActivity"/>
+        <activity android:name=".Activities.ProtocolsListActivity"/>
 
-        <activity android:name=".ProtocolDetailActivity"/>
+        <activity android:name=".Activities.ProtocolDetailActivity"/>
 
     </application>
 
