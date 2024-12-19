@@ -1,4 +1,4 @@
-package com.example.telecommanager.Adapters;
+package com.example.telecommanager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,10 +6,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.telecommanager.Databases.DatabaseHelper;
-import com.example.telecommanager.Databases.FaultReport;
-import com.example.telecommanager.R;
-import com.example.telecommanager.UpdateStatisticsListener;
+
 
 import java.util.List;
 

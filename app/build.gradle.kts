@@ -57,14 +57,22 @@ dependencies {
 
     // Test dependencies
     testImplementation(libs.junit)
+    androidTestImplementation ("androidx.test:core:1.5.0")
     androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.ext:junit-ktx:1.1.3")
+    testImplementation ("junit:junit:4.13.2")
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation ("junit:junit:4.13.2")
     androidTestImplementation(libs.androidx.ui.test.junit4)
-    testImplementation("org.mockito:mockito-core:5.14.2") // Mockito for unit tests
-    androidTestImplementation("org.mockito:mockito-android:5.14.2") // Mockito for Android tests
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.0.0") // For testing Compose UI
-    androidTestImplementation ("androidx.test:core:1.2.0")
+    testImplementation("org.mockito:mockito-core:5.14.2")
+    androidTestImplementation("org.mockito:mockito-android:5.14.2")
+    testImplementation ("org.mockito:mockito-inline:3.11.2")
+    testImplementation("org.robolectric:robolectric:4.6.1")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.0.0")
+    testImplementation("androidx.test:runner:1.5.2")
+    androidTestImplementation("androidx.test:core:1.4.0")
 
     // Debugging dependencies
     debugImplementation(libs.androidx.ui.tooling)

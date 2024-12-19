@@ -1,4 +1,4 @@
-package com.example.telecommanager.Activities;
+package com.example.telecommanager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,9 +9,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.telecommanager.Databases.DatabaseHelper;
-import com.example.telecommanager.Databases.NetworkElement;
-import com.example.telecommanager.R;
 
 public class RegisterElementActivity extends AppCompatActivity {
 

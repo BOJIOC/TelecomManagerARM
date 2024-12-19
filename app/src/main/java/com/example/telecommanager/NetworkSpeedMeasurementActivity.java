@@ -1,4 +1,4 @@
-package com.example.telecommanager.Activities;
+package com.example.telecommanager;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -6,7 +6,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.telecommanager.R;
+
 import java.io.BufferedInputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;

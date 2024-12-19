@@ -1,4 +1,4 @@
-package com.example.telecommanager.Activities;
+package com.example.telecommanager;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,13 +8,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.telecommanager.Adapters.FaultReportAdapter;
-import com.example.telecommanager.Adapters.NetworkElementAdapter;
-import com.example.telecommanager.Databases.DatabaseHelper;
-import com.example.telecommanager.Databases.FaultReport;
-import com.example.telecommanager.Databases.NetworkElement;
-import com.example.telecommanager.R;
-import com.example.telecommanager.UpdateStatisticsListener;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.telecommanager.Adapters;
+package com.example.telecommanager;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,10 +13,6 @@ import android.widget.TextView;
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import com.example.telecommanager.Databases.DatabaseHelper;
-import com.example.telecommanager.Databases.NetworkElement;
-import com.example.telecommanager.R;
-import com.example.telecommanager.UpdateStatisticsListener;
 
 public class NetworkElementAdapter extends RecyclerView.Adapter<NetworkElementAdapter.NetworkElementViewHolder> {
 

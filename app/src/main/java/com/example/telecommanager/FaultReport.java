@@ -1,4 +1,4 @@
-package com.example.telecommanager.Databases;
+package com.example.telecommanager;
 
 public class FaultReport {
     private int id;
@@ -6,12 +6,14 @@ public class FaultReport {
     private String status;
     private long timestamp;
 
+    // Конструктор с тремя параметрами
     public FaultReport(String description, String status, long timestamp) {
         this.description = description;
         this.status = status;
         this.timestamp = timestamp;
     }
 
+    // Конструктор с четырьмя параметрами
     public FaultReport(int id, String description, String status, long timestamp) {
         this.id = id;
         this.description = description;
@@ -19,6 +21,13 @@ public class FaultReport {
         this.timestamp = timestamp;
     }
 
+    public FaultReport() {
+        this.description = "";
+        this.status = "NEW";
+        this.timestamp = System.currentTimeMillis();
+    }
+
+    // Геттеры и сеттеры
     public int getId() {
         return id;
     }

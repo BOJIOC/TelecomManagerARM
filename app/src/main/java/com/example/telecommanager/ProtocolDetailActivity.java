@@ -1,11 +1,10 @@
-package com.example.telecommanager.Activities;
+package com.example.telecommanager;
 
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.telecommanager.R;
 
 public class ProtocolDetailActivity extends AppCompatActivity {
 

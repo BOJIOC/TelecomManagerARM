@@ -1,4 +1,5 @@
-package com.example.telecommanager.Activities;
+package com.example.telecommanager;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -6,9 +7,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.telecommanager.Databases.DatabaseHelper;
-import com.example.telecommanager.Databases.FaultReport;
-import com.example.telecommanager.R;
 
 public class FaultReportActivity extends AppCompatActivity {
 
@@ -32,11 +30,8 @@ public class FaultReportActivity extends AppCompatActivity {
             if (!description.isEmpty()) {
                 long timestamp = System.currentTimeMillis();
                 String status = "Новый";
-
-                // Создаем объект FaultReport
                 FaultReport faultReport = new FaultReport(description, status, timestamp);
-                dbHelper.addFaultReport(faultReport); // Добавляем в базу данных
-
+                dbHelper.addFaultReport(faultReport);
                 Toast.makeText(FaultReportActivity.this, "Отчет отправлен!", Toast.LENGTH_SHORT).show();
                 finish();
             } else {

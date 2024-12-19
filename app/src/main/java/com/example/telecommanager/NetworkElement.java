@@ -1,4 +1,4 @@
-package com.example.telecommanager.Databases;
+package com.example.telecommanager;
 
 public class NetworkElement {
     private int id;
